@@ -87,7 +87,7 @@
   position: relative;
   min-width: 100%;
   max-height: 450px;
-  aspect-ratio: 1 / 1;
+  /* aspect-ratio: 1 / 1; */
   border-radius: 5px;
   overflow: hidden;
   scroll-snap-align: start;
@@ -98,12 +98,14 @@
   object-position: right;
 }
 .banner-content {
-  background: hsla(0, 0%, 100%, 0.8);
+  /* background: hsla(0, 0%, 100%, 0.8); */
   position: absolute;
+  top: 0;
   bottom: 25px;
   left: 25px;
   right: 25px;
   padding: 20px 25px;
+  padding-right: 40px;
   border-radius: 5px;
 }
 .banner-subtitle {
