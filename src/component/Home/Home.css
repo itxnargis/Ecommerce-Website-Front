@@ -72,6 +72,7 @@
 .banner {
   border-radius: 1rem;
   background: #edeff457;
+  margin-top: var(--header-height);
 }
 .slider-container {
   display: flex;
@@ -146,7 +147,7 @@
   margin: 3vmax auto;
   margin-bottom: 0;
   padding: 6vmax 0;
-  width: 95vw;
+  width: 100vw;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 100%;
@@ -276,11 +277,12 @@
 }
 
 @media (min-width: 480px) {
-  .slider-item { aspect-ratio: 5 / 3; }
+  .slider-item { aspect-ratio: 8 / 3; }
 
   .banner-content {
-    top: 50%;
+    top: 46%;
     right: auto;
+    background-color: transparent;
     bottom: auto;
     transform: translateY(-50%);
     max-width: 320px;
