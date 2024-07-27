@@ -44,3 +44,14 @@
 .searchContainer > input[type="submit"]:hover {
     background-color: rgb(39, 141, 61);
 }
+@media screen and (max-width: 600px) {
+    .searchContainer > input[type="submit"] {
+        width: 35%;
+        padding: 0;
+    }
+
+    .searchContainer > input[type="text"] {
+        width: 9.7rem;
+        padding: .94vmax .6vmax;
+    }
+}
