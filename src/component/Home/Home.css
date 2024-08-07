@@ -72,7 +72,7 @@
 .banner {
   border-radius: 1rem;
   background: #edeff457;
-  margin-top: var(--header-height);
+  /* margin-top: var(--header-height); */
 }
 .slider-container {
   display: flex;
@@ -268,8 +268,10 @@
   }
 
   .productCard > div > span {
-      margin: 0 0.5vmax;
-      font: 300 1vmax "Roboto";
+    font-size: 1rem;
+  }
+  .product-info {
+    font-size: 1.9vmax;
   }
 }
 @media screen and (max-width: 600px) {
