@@ -22,6 +22,9 @@ const Header = () => {
   const handleCloseModal = () => {
     setOpenModal(false);
   };
+  const closeSidebar = () => {
+    setIsOpen(false);
+  };
 
   return (
     <header>
@@ -44,15 +47,14 @@ const Header = () => {
           </div>
         </div>
       </div>
-
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className='sidebar-content'>
           <Link to="#" className="close-icon" onClick={toggleSidebar}><FaTimes /></Link>
           <div className='sidebar-links'>
-            <Link to="/" className="sidebar-link">Home</Link>
-            <Link to="/products" className="sidebar-link">Products</Link>
-            <Link to="/about" className="sidebar-link">About</Link>
-            <Link to="/contact" className="sidebar-link">Contact</Link>
+            <Link to="/" className="sidebar-link" onClick={closeSidebar}>Home</Link>
+            <Link to="/products" className="sidebar-link" onClick={closeSidebar}>Products</Link>
+            <Link to="/about" className="sidebar-link" onClick={closeSidebar}>About</Link>
+            <Link to="/contact" className="sidebar-link" onClick={closeSidebar}>Contact</Link>
           </div>
         </div>
       </div>
