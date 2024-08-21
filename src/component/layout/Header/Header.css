@@ -129,7 +129,7 @@ header {
   z-index: 1;
   width: 100%;
 } */
-.sidebar {
+.side-bar {
   position: fixed;
   top: 0;
   right: -300px;
@@ -139,20 +139,20 @@ header {
   transition: right 0.3s ease;
   z-index: 2;
 }
-.sidebar.open {
+.side-bar.open {
   right: 0;
 }
-.sidebar-content {
+.side-bar-content {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-.sidebar-links {
+.side-bar-links {
   display: flex;
   flex-direction: column;
   padding: 2rem;
 }
-.sidebar-link {
+.side-bar-link {
   text-decoration: none;
   color: #000;
   font-size: 1.5rem;

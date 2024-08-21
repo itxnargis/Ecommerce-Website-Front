@@ -47,14 +47,14 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-        <div className='sidebar-content'>
+      <div className={`side-bar ${isOpen ? 'open' : ''}`}>
+        <div className='side-bar-content'>
           <Link to="#" className="close-icon" onClick={toggleSidebar}><FaTimes /></Link>
-          <div className='sidebar-links'>
-            <Link to="/" className="sidebar-link" onClick={closeSidebar}>Home</Link>
-            <Link to="/products" className="sidebar-link" onClick={closeSidebar}>Products</Link>
-            <Link to="/about" className="sidebar-link" onClick={closeSidebar}>About</Link>
-            <Link to="/contact" className="sidebar-link" onClick={closeSidebar}>Contact</Link>
+          <div className='side-bar-links'>
+            <Link to="/" className="side-bar-link" onClick={closeSidebar}>Home</Link>
+            <Link to="/products" className="side-bar-link" onClick={closeSidebar}>Products</Link>
+            <Link to="/about" className="side-bar-link" onClick={closeSidebar}>About</Link>
+            <Link to="/contact" className="side-bar-link" onClick={closeSidebar}>Contact</Link>
           </div>
         </div>
       </div>

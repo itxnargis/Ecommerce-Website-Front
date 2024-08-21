@@ -50,7 +50,7 @@ const UpdateProduct = () => {
         "SmartPhones",
     ];
 
-    const productId = useParams();
+    const productId = useParams().id;
 
     useEffect(() => {
         if (product && product._id !== productId) {
@@ -91,7 +91,7 @@ const UpdateProduct = () => {
 
     const updateProductSubmitHandler = (e) => {
         e.preventDefault();
-
+ 
         const myForm = new FormData();
 
         myForm.set("name", name);

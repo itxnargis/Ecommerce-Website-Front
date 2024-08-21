@@ -30,7 +30,6 @@ const Product = ({ product }) => {
                 </div>
                 <div className="product-description">
                     <p className="product-name">{product.name}</p>
-                    <p className="product-info">({product.description})</p>
                     <div className="product-rating">
                         <Rating {...options} />
                         <span className="productCardSpan">({product.numOfReviews} Reviews)</span>
