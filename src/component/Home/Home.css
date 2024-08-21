@@ -193,7 +193,11 @@
   font-family: 'Droid Sans';
 }
 .product-name {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
+  color: #080808;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: .4rem;
 }
 .product-info {
   margin-top: .4rem;
