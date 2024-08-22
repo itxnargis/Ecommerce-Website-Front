@@ -19,6 +19,7 @@ const NewProduct = () => {
   const alert = useAlert();
   const navigate = useNavigate();
   const { loading, error, success } = useSelector((state) => state.newProduct);
+  const [brand, setBrand] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [description, setDescription] = useState("");
@@ -55,6 +56,7 @@ const NewProduct = () => {
 
     const myForm = new FormData();
 
+    myForm.set("brand", brand);
     myForm.set("name", name);
     myForm.set("price", price);
     myForm.set("description", description);
@@ -99,7 +101,16 @@ const NewProduct = () => {
             onSubmit={createProductSubmitHandler}
           >
             <h1>Create Product</h1>
-
+            <div>
+              <SpellcheckIcon />
+              <input
+                type="text"
+                placeholder="Product's Brand"
+                required
+                value={brand}
+                onChange={(e) => setBrand(e.target.value)}
+              />
+            </div>
             <div>
               <SpellcheckIcon />
               <input

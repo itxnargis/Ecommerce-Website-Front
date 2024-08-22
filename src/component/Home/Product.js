@@ -29,6 +29,7 @@ const Product = ({ product }) => {
                     <img src={product.images[0].url} alt={product.name} />
                 </div>
                 <div className="product-description">
+                <p className="product-brand">{product.brand}</p>
                     <p className="product-name">{product.name}</p>
                     <div className="product-rating">
                         <Rating {...options} />
