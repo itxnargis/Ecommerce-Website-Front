@@ -1,5 +1,3 @@
-// Header.js
-
 import React, { useState } from 'react';
 import Search from '../../Product/Search.js';
 import { FaBars, FaTimes, FaChevronCircleDown, FaUser, FaShoppingCart } from 'react-icons/fa';
@@ -38,11 +36,11 @@ const Header = () => {
             <Link to="/contact" className="link-details">Contact</Link>
           </div>
           <div className="social">
-            <Link to="/login" className="login-icon">
-              <FaUser />
-            </Link>
             <Link to="/cart" className="cart-icon">
               <FaShoppingCart />
+            </Link>
+            <Link to="/login" className="login-icon">
+              <FaUser />
             </Link>
           </div>
         </div>
