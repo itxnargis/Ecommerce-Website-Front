@@ -1,4 +1,3 @@
-
 .filterContent {
   position: absolute;
   top: 50%;
@@ -11,39 +10,38 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   outline: none;
 }
-  .categoryBox {
-    list-style-type: none;
-    padding: 0;
-  }
+.categoryBox {
+  list-style-type: none;
+  padding: 0;
+}
 
-  .category-link {
-    cursor: pointer;
-    padding: 0.5rem 0;
-    font-size: 1rem;
-  }
+.category-link {
+  cursor: pointer;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
 
-  .category-link:hover {
-    color: #ff6347;
-  }
+.category-link:hover {
+  color: #ff6347;
+}
 
-  .filterButtons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2vmax;
-  }
+.filterButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vmax;
+}
 
+.applyButton,
+.cancelButton {
+  padding: 0.5vmax 2vmax;
+  border: none;
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
-  .applyButton,
-  .cancelButton {
-    padding: 0.5vmax 2vmax;
-    border: none;
-    background-color: tomato;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-
-  .applyButton:hover,
-  .cancelButton:hover {
-    background-color: darkred;
-  }
+.applyButton:hover,
+.cancelButton:hover {
+  background-color: darkred;
+}

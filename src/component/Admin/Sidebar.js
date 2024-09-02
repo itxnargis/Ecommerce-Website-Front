@@ -47,15 +47,15 @@ const Sidebar = () => {
                 </Link>
 
                 <Link to="/admin/orders">
-                <p><ListAltIcon />Orders</p>
+                    <p><ListAltIcon />Orders</p>
                 </Link>
 
                 <Link to="/admin/users">
-                <p><PeopleIcon />Users</p>
+                    <p><PeopleIcon />Users</p>
                 </Link>
 
                 <Link to="/admin/reviews">
-                <p><RateReviewIcon />Reviews</p>
+                    <p><RateReviewIcon />Reviews</p>
                 </Link>
 
             </div>

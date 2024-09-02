@@ -3,6 +3,7 @@ import Search from '../../Product/Search.js';
 import { FaBars, FaTimes, FaChevronCircleDown, FaUser, FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import FilterModal from '../../Product/FilterModal';
+import logo from "../../../images/Trendz-logo.png"
 import './Header.css';
 
 const Header = () => {
@@ -28,7 +29,7 @@ const Header = () => {
     <header>
       <div className='header'>
         <div className='header-component'>
-          <Link to="#" className="bar-logo" onClick={toggleSidebar}><FaBars /></Link>
+          <img src={logo} alt="payment method" className="logo-img" />
           <div className='links'>
             <Link to="/" className="link-details">Home</Link>
             <Link to="/products" className="link-details">Products</Link>
@@ -41,6 +42,9 @@ const Header = () => {
             </Link>
             <Link to="/login" className="login-icon">
               <FaUser />
+            </Link>
+            <Link to="#" className="bar-icon hidden" onClick={toggleSidebar}>
+              <FaBars />
             </Link>
           </div>
         </div>

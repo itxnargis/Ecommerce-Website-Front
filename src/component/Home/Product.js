@@ -29,7 +29,7 @@ const Product = ({ product }) => {
                     <img src={product.images[0].url} alt={product.name} />
                 </div>
                 <div className="product-description">
-                <p className="product-brand">{product.brand}</p>
+                    <p className="product-brand">{product.brand}</p>
                     <p className="product-name">{product.name}</p>
                     <div className="product-rating">
                         <Rating {...options} />
@@ -37,8 +37,8 @@ const Product = ({ product }) => {
                     </div>
                     <span className="product-price">{`Rs ${product.price}`}</span>
                     <button onClick={addToCartHandler} className="cart-button">
-                Add to cart
-            </button>
+                        Add to cart
+                    </button>
                 </div>
             </Link>
         </div>

@@ -1,9 +1,4 @@
 :root {
-
-  /**
-   * colors
-   */
-
   --spanish-gray: hsl(0, 0%, 60%);
   --sonic-silver: hsl(0, 0%, 47%);
   --eerie-black: hsl(0, 0%, 13%);
@@ -37,20 +32,9 @@
   --weight-500: 500;
   --weight-600: 600;
   --weight-700: 700;
-
-  /**
-   * border-radius
-   */
-
   --border-radius-md: 10px;
   --border-radius-sm: 5px;
-
-  /**
-   * transition
-   */
-
   --transition-timing: 0.2s ease;
-
 }
 
 .header-main {
@@ -86,7 +70,7 @@
 .slider-item {
   position: relative;
   min-width: 100%;
-  max-height: 450px;
+  max-height: 750px;
   /* aspect-ratio: 1 / 1; */
   border-radius: 5px;
   overflow: hidden;
@@ -95,22 +79,26 @@
 .slider-item .banner-img {
   width: 100%;
   object-fit: cover;
+  height: 400px;
   object-position: right;
 }
 .banner-content {
-  /* background: hsla(0, 0%, 100%, 0.8); */
+  background: hsl(0deg 19.2% 83.62% / 80%);
+  box-shadow: 4px 4px 4px #b3a6a6;
   position: absolute;
-  top: 0;
-  bottom: 25px;
-  left: 25px;
-  right: 25px;
-  padding: 20px 25px;
+  top: 30%;
+  /* bottom: 25px; */
+  /* left: 25px; */
+  /* right: 25px; */
+  padding: 25px 30px;
   padding-right: 40px;
+  margin: 0 2rem;
+  text-align: center;
   border-radius: 5px;
 }
 .banner-subtitle {
-  color: hsl(353, 100%, 78%);
-  font-size: 0.875rem;
+  color: hsl(353deg 56.13% 47.5%);
+  font-size: 1.2rem;
   font-weight: 500;
   text-transform: capitalize;
   letter-spacing: 2px;
@@ -118,18 +106,15 @@
 }
 .banner-title {
   color: hsl(0, 0%, 13%);
-  font-size: 1.563rem;
+  font-size: 1.763rem;
   text-transform: uppercase;
   line-height: 1;
   margin-bottom: 10px;
 }
-.banner-text {
-  display: none;
-}
 .shop-button {
   padding: 0.5rem 2rem;
   margin-top: 1rem;
-  background: #395032;
+  background: rgb(39, 141, 61);
   border: transparent;
   cursor: pointer;
   color: lightgoldenrodyellow;
@@ -161,16 +146,15 @@
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  border: 1px solid rgba(0, 0, 0, .3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   color: rgb(248, 245, 245);
   margin: 1vmax;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
   /* align-items: center; */
   background: cadetblue;
   transition: all 0.5s;
   overflow: hidden;
 }
-
 
 .image-wrapper {
   width: 100%;
@@ -190,7 +174,7 @@
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem;
-  font-family: 'Droid Sans';
+  font-family: "Droid Sans";
 }
 .product-brand {
   color: black;
@@ -199,15 +183,15 @@
   letter-spacing: 1px;
 }
 .product-name {
-  font-size: .9rem;
-  color: #524e4e;
-  font-weight: bold;
+  font-size: 1rem;
+  color: hsl(0, 2%, 20%);
+  font-weight: 600;
   letter-spacing: 1px;
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 .product-info {
-  margin-top: .4rem;
-  margin-bottom: .179rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.179rem;
   font-size: 1.1vmax;
 }
 .product-rating {
@@ -221,14 +205,14 @@
 .productCard > div > span {
   margin: 0.5vmax;
 }
-.productCard>p {
+.productCard > p {
   font-family: "Roboto";
   font-size: 2.2vmax;
   margin: 1vmax;
   margin-bottom: 0;
 }
 
-.productCard>span {
+.productCard > span {
   color: tomato;
   font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
   font-size: 1vmax;
@@ -240,20 +224,19 @@
   font-weight: 600;
 }
 .cart-button {
-    margin-top: .4vmax;
-    margin-bottom: .6vmax;
-    border: transparent;
-    border-radius: .1rem;
-    padding: .7rem 0;
-    letter-spacing: 2px;
-    font: 300 1.1rem "Roboto";
-    background: rgb(15, 15, 15);
-    color: white;
+  margin-top: 0.4vmax;
+  margin-bottom: 0.6vmax;
+  border: transparent;
+  border-radius: 0.1rem;
+  padding: 0.7rem 0;
+  letter-spacing: 2px;
+  font: 300 1.1rem "Roboto";
+  background: rgb(15, 15, 15);
+  color: white;
 }
 .cart-button:hover {
   background: #1b1b1b;
 }
-
 
 .productCard:hover {
   box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
@@ -261,20 +244,19 @@
 }
 
 @media screen and (max-width: 940px) {
-.productCard {
-  width: 46vmax;
-}
-.productCard > img {
-  height: 380px;
-}
+  .productCard {
+    width: 46vmax;
+  }
+  .productCard > img {
+    height: 380px;
+  }
   .productCard > p {
-      font-size: 1.7vmax;
+    font-size: 1.7vmax;
   }
 
-
   .productCard > span {
-      font-size: 1.5vmax;
-      margin: 0 1.2vmax;
+    font-size: 1.5vmax;
+    margin: 0 1.2vmax;
   }
 
   .productCard > div > span {
@@ -290,11 +272,13 @@
   }
 }
 
-@media (min-width: 480px) {
-  .slider-item { aspect-ratio: 8 / 3; }
+@media (min-width: 580px) {
+  .slider-item {
+    aspect-ratio: 8 / 3;
+  }
 
   .banner-content {
-    top: 46%;
+    top: 50%;
     right: auto;
     background-color: transparent;
     bottom: auto;
@@ -302,7 +286,9 @@
     max-width: 320px;
   }
 
-  .banner-subtitle { --fs-7: 1rem; }
+  .banner-subtitle {
+    --fs-7: 1rem;
+  }
 
   .banner-text {
     display: block;
@@ -312,48 +298,75 @@
     margin-bottom: 10px;
   }
 
-  .banner-text b { font-size: var(--fs-2); }
- }
+  .banner-text b {
+    font-size: var(--fs-2);
+  }
+}
 
- @media (min-width: 570px) {
-  .slider-item { aspect-ratio: 4 / 2; }
+@media (min-width: 570px) {
+  .slider-item {
+    aspect-ratio: 4 / 2;
+  }
 
-  .banner-content { background: none; }
- }
+  .banner-content {
+    background: none;
+  }
+}
 
- @media (min-width: 768px)  {
-
+@media (min-width: 768px) {
   .slider-item {
     aspect-ratio: auto;
     height: 350px;
   }
 
-  .banner-content { max-width: 380px; }
+  .banner-content {
+    max-width: 380px;
+    box-shadow: none;
+    text-align: left;
+  }
 
-  .banner-subtitle { --fs-7: 1.25rem; }
+  .banner-subtitle {
+    --fs-7: 1.25rem;
+  }
 
-  .banner-text { --fs-7: 1.125rem; }
+  .banner-text {
+    --fs-7: 1.125rem;
+  }
 
-  .banner-text b { --fs-2: 1.875rem; }
+  .banner-text b {
+    --fs-2: 1.875rem;
+  }
 
-  .banner-btn { --fs-11: 0.75rem; }
+  .banner-btn {
+    --fs-11: 0.75rem;
+  }
+}
 
- }
-
-
-@media (min-width: 1024px)  {
-
-
-  .slider-item { height: 380px; }
+@media (min-width: 1024px) {
+  .slider-item {
+    height: 380px;
+  }
 
   .banner-content {
     left: 75px;
     max-width: 400px;
   }
 
-  .banner-subtitle { --fs-7: 1.625rem; }
+  .banner-subtitle {
+    --fs-7: 1.625rem;
+  }
 
-  .banner-text { --fs-7: 1.375rem; }
+  .banner-text {
+    --fs-7: 1.375rem;
+  }
 
-  .banner-btn { --fs-11: 0.875rem; }
+  .banner-btn {
+    --fs-11: 0.875rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .banner-title {
+    color: var(--sonic-silver);
+  }
 }

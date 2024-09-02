@@ -91,7 +91,7 @@ const UpdateProduct = () => {
 
     const updateProductSubmitHandler = (e) => {
         e.preventDefault();
- 
+
         const myForm = new FormData();
 
         myForm.set("name", name);

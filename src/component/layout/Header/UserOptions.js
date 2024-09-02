@@ -24,10 +24,12 @@ const UserOptions = ({ user }) => {
     const options = [
         // { icon: <ListAltIcon />, name: "Orders", func: orders },
         { icon: <PersonIcon />, name: "Profile", func: account },
-        { icon: <ShoppingCartIcon
-            style={{color: cartItems.length > 0 ? "tomato" : "unset"}}
-        />,
-             name: `Cart(${cartItems.length})`, func: cart, },
+        {
+            icon: <ShoppingCartIcon
+                style={{ color: cartItems.length > 0 ? "tomato" : "unset" }}
+            />,
+            name: `Cart(${cartItems.length})`, func: cart,
+        },
 
         { icon: <ExitToAppIcon />, name: "Logout", func: logoutUser },
     ];
@@ -63,7 +65,7 @@ const UserOptions = ({ user }) => {
 
     return (
         <Fragment>
-            <Backdrop open={open} style={{zIndex: "10" }}/>
+            <Backdrop open={open} style={{ zIndex: "10" }} />
             <SpeedDial
                 ariaLabel="SpeedDial tooltip example"
                 onClose={() => setOpen(false)}
@@ -86,7 +88,7 @@ const UserOptions = ({ user }) => {
                         icon={item.icon}
                         tooltipTitle={item.name}
                         onClick={item.func}
-                        tooltipOpen={window.innerWidth<= 600 ? true : false}
+                        tooltipOpen={window.innerWidth <= 600 ? true : false}
                     />
                 ))}
             </SpeedDial>

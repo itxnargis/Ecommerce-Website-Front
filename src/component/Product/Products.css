@@ -1,4 +1,4 @@
-.Product {
+.product-section {
   background: #eee;
   padding-top: 1cap;
 }
@@ -99,7 +99,7 @@
   padding: 4vmax;
   margin: 0 2rem;
   background-color: #fff;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
 }
 
 .categoryBox {
@@ -125,8 +125,6 @@
   border: 1px solid rgba(0, 0, 0, 0.329);
   padding: 1vmax;
 }
-
-
 
 @media screen and (max-width: 600px) {
   .filterBox {

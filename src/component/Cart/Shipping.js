@@ -31,16 +31,16 @@ const Shipping = () => {
     const shippingSubmit = (e) => {
         e.preventDefault();
 
-        if(phoneNo.length < 10 || phoneNo.length > 10){
+        if (phoneNo.length < 10 || phoneNo.length > 10) {
             alert.error("Phone number should be 10 digits long");
             return;
         }
         dispatch(
-            saveShippingInfo({address, city, state, country, pinCode, phoneNo })
+            saveShippingInfo({ address, city, state, country, pinCode, phoneNo })
         );
         navigate("/order/confirm");
 
-     };
+    };
 
     return (
         <Fragment>

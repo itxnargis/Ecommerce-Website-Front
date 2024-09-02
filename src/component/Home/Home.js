@@ -36,16 +36,15 @@ const Home = () => {
         <Fragment>
           <MetaData title="ECOMMERCE" />
 
-
-          <div class="banner">
-            <div class="banner-container">
-              <div class="slider-container has-scrollbar">
-                <div class="slider-item">
-                  <img src={banner} alt="women's latest fashion sale" class="banner-img" />
-                  <div class="banner-content">
-                    <p class="banner-subtitle">Trending item</p>
-                    <h2 class="banner-title">Explore latest fashion sale</h2>
-                    <p class="banner-text">
+          <div className="banner">
+            <div className="banner-container">
+              <div className="slider-container has-scrollbar">
+                <div className="slider-item">
+                  <img src={banner} alt="women's latest fashion sale" className="banner-img" />
+                  <div className="banner-content">
+                    <p className="banner-subtitle">Trending item</p>
+                    <h2 className="banner-title">Explore latest fashion sale</h2>
+                    <p className="banner-text">
                       FIND AMAZING PRODUCTS BELOW
                     </p>
                     <Link to="/products">
