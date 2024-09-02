@@ -8,10 +8,9 @@ import { useAlert } from "react-alert";
 const Product = ({ product }) => {
     const dispatch = useDispatch();
     const alert = useAlert();
-    const [quantity] = useState(1);
 
     const addToCartHandler = () => {
-        dispatch(addItemsToCart(product._id, quantity));
+        dispatch(addItemsToCart(product._id, 1));
         alert.success("Product added to cart");
     };
 
@@ -33,7 +32,7 @@ const Product = ({ product }) => {
                     <p className="product-name">{product.name}</p>
                     <div className="product-rating">
                         <Rating {...options} />
-                        <span className="productCardSpan">({product.numOfReviews} Reviews)</span>
+                        <span className="product-card-span">({product.numOfReviews} Reviews)</span>
                     </div>
                     <span className="product-price">{`Rs ${product.price}`}</span>
                     <button onClick={addToCartHandler} className="cart-button">

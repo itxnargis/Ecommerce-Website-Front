@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { useEffect } from "react";
 import Sidebar from "./Sidebar.js";
 import "./dashboard.css";
 import { Link } from "react-router-dom";
@@ -9,9 +9,27 @@ import { getAdminProduct } from "../../actions/productAction";
 import { getAllOrders } from "../../actions/orderAction.js";
 import { getAllUsers } from "../../actions/userAction.js";
 import MetaData from "../layout/metaData";
-import { Chart, ArcElement, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import { Chart,
+  ArcElement,
+CategoryScale,
+LinearScale,
+PointElement,
+LineElement,
+Title,
+Tooltip,
+Legend
+ } from 'chart.js';
 
-Chart.register(ArcElement, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+Chart.register(
+ArcElement,
+CategoryScale,
+LinearScale,
+PointElement,
+LineElement,
+Title,
+Tooltip,
+Legend
+);
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -22,12 +40,11 @@ const Dashboard = () => {
 
   let outOfStock = 0;
 
-  products &&
-    products.forEach((item) => {
-      if (item.Stock === 0) {
-        outOfStock += 1;
-      }
-    });
+  products?.forEach((item) => {
+    if (item.Stock === 0) {
+      outOfStock += 1;
+    }
+  });
 
   useEffect(() => {
     dispatch(getAdminProduct());
@@ -35,11 +52,7 @@ const Dashboard = () => {
     dispatch(getAllUsers());
   }, [dispatch]);
 
-  let totalAmount = 0;
-  orders &&
-    orders.forEach((item) => {
-      totalAmount += item.totalPrice;
-    });
+  const totalAmount = orders?.reduce((acc, item) => acc + item.totalPrice, 0) || 0;
 
   const lineState = {
     labels: ["Initial Amount", "Amount Earned"],
@@ -65,46 +78,44 @@ const Dashboard = () => {
   };
 
   return (
-    <Fragment>
-      <div className="dashboard">
-        <MetaData title="Dashboard - Admin Panel" />
-        <Sidebar />
+    <div className="dashboard">
+      <MetaData title="Dashboard - Admin Panel" />
+      <Sidebar />
 
-        <div className="dashboardContainer">
-          <Typography component="h1">Dashboard</Typography>
+      <div className="dashboard-container">
+        <Typography component="h1">Dashboard</Typography>
 
-          <div className="dashboardSummary">
-            <div>
-              <p>
-                Total Amount <br /> ₹{totalAmount}
-              </p>
-            </div>
-            <div className="dashboardSummaryBox2">
-              <Link to="/admin/products">
-                <p>Product</p>
-                <p>{products && products.length}</p>
-              </Link>
-              <Link to="/admin/orders">
-                <p>Orders</p>
-                <p>{orders && orders.length}</p>
-              </Link>
-              <Link to="/admin/users">
-                <p>Users</p>
-                <p>{users && users.length}</p>
-              </Link>
-            </div>
+        <div className="dashboard-summary">
+          <div>
+            <p>
+              Total Amount <br /> ₹{totalAmount}
+            </p>
           </div>
-
-          <div className="lineChart">
-            <Line data={lineState} />
-          </div>
-
-          <div className="doughnutChart">
-            <Doughnut data={doughnutState} />
+          <div className="dashboard-summary-box2">
+            <Link to="/admin/products">
+              <p>Product</p>
+              <p>{products?.length}</p>
+            </Link>
+            <Link to="/admin/orders">
+              <p>Orders</p>
+              <p>{orders?.length}</p>
+            </Link>
+            <Link to="/admin/users">
+              <p>Users</p>
+              <p>{users?.length}</p>
+            </Link>
           </div>
         </div>
+
+        <div className="lineChart">
+          <Line data={lineState} />
+        </div>
+
+        <div className="doughnutChart">
+          <Doughnut data={doughnutState} />
+        </div>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

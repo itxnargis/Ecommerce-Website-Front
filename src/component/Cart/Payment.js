@@ -21,7 +21,7 @@ import { createOrder, clearErrors } from "../../actions/orderAction";
 import { useNavigate } from "react-router-dom";
 
 const Payment = () => {
-  const orderInfo = JSON.parse(sessionStorage.getItem("orderInfo"));
+  const orderInfo = JSON.parse(sessionStorage.getItem("order-info"));
 
   const dispatch = useDispatch();
   const alert = useAlert();
@@ -120,27 +120,27 @@ const Payment = () => {
     <Fragment>
       <MetaData title="Payment" />
       <CheckoutSteps activeStep={2} />
-      <div className="paymentContainer">
-        <form className="paymentForm" onSubmit={(e) => submitHandler(e)}>
+      <div className="payment-container">
+        <form className="payment-form" onSubmit={(e) => submitHandler(e)}>
           <Typography>Card Info</Typography>
           <div>
             <CreditCardIcon />
-            <CardNumberElement className="paymentInput" />
+            <CardNumberElement className="payment-input" />
           </div>
           <div>
             <EventIcon />
-            <CardExpiryElement className="paymentInput" />
+            <CardExpiryElement className="payment-input" />
           </div>
           <div>
             <VpnKeyIcon />
-            <CardCvcElement className="paymentInput" />
+            <CardCvcElement className="payment-input" />
           </div>
 
           <input
             type="submit"
             value={`Pay - ₹${orderInfo && orderInfo.totalPrice}`}
             ref={payBtn}
-            className="paymentFormBtn"
+            className="payment-form-btn"
           />
         </form>
       </div>

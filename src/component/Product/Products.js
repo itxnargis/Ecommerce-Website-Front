@@ -40,7 +40,7 @@ const Products = () => {
         <Fragment>
           <MetaData title="PRODUCTS --- ECOMMERCE" />
           <div className="product-section">
-            <h2 className="productsHeading">Products</h2>
+            <h2 className="products-heading">Products</h2>
             <div className="underline"></div>
             <div className="products" id="product">
               {products && products.map((product) => (
@@ -48,7 +48,7 @@ const Products = () => {
               ))}
             </div>
             {resultPerPage < count && (
-              <div className="PaginationBox">
+              <div className="pagination-box">
                 <Pagination
                   activePage={currentPage}
                   itemsCountPerPage={resultPerPage}
@@ -60,8 +60,8 @@ const Products = () => {
                   lastPageText="Last"
                   itemClass="page-item"
                   linkClass="page-link"
-                  activeClass="pageItemActive"
-                  activeLinkClass="pageLinkActive"
+                  activeClass="page-item-active"
+                  activeLinkClass="page-link-active"
                 />
               </div>
             )}

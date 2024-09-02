@@ -54,12 +54,12 @@ const ResetPassword = () => {
       ) : (
         <Fragment>
           <MetaData title="Change Password" />
-          <div className="resetPasswordContainer">
-            <div className="resetPasswordBox">
-              <h2 className="resetPasswordHeading">Update Profile</h2>
+          <div className="reset-password-container">
+            <div className="reset-password-box">
+              <h2 className="reset-password-heading">Update Profile</h2>
 
               <form
-                className="resetPasswordForm"
+                className="reset-password-form"
                 onSubmit={resetPasswordSubmit}
               >
                 <div>
@@ -72,7 +72,7 @@ const ResetPassword = () => {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
-                <div className="loginPassword">
+                <div className="login-password">
                   <LockIcon />
                   <input
                     type="password"
@@ -85,7 +85,7 @@ const ResetPassword = () => {
                 <input
                   type="submit"
                   value="Update"
-                  className="resetPasswordBtn"
+                  className="reset-password-btn"
                 />
               </form>
             </div>

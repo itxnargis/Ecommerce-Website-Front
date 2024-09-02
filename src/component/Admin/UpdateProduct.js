@@ -129,12 +129,12 @@ const UpdateProduct = () => {
 
     return (
         <Fragment>
-            <MetaData title="Create Product" />
             <div className="dashboard">
+            <MetaData title="Create Product" />
                 <Sidebar />
-                <div className="newProductContainer">
+                <div className="new-product-container">
                     <form
-                        className="createProductForm"
+                        className="create-product-form"
                         encType="multipart/form-data"
                         onSubmit={updateProductSubmitHandler}
                     >
@@ -199,7 +199,7 @@ const UpdateProduct = () => {
                             />
                         </div>
 
-                        <div id="createProductFormFile">
+                        <div id="create-product-form-file">
                             <input
                                 type="file"
                                 name="avatar"
@@ -209,21 +209,21 @@ const UpdateProduct = () => {
                             />
                         </div>
 
-                        <div id="createProductFormImage">
+                        <div id="create-product-form-image">
                             {oldImages &&
                                 oldImages.map((image, index) => (
                                     <img key={index} src={image.url} alt="Old Product Preview" />
                                 ))}
                         </div>
 
-                        <div id="createProductFormImage">
+                        <div id="create-product-form-image">
                             {imagesPreview.map((image, index) => (
                                 <img key={index} src={image} alt="Product Preview" />
                             ))}
                         </div>
 
                         <Button
-                            id="createProductBtn"
+                            id="create-product-btn"
                             type="submit"
                             disabled={loading ? true : false}
                         >

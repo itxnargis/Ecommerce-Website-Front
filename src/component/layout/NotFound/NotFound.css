@@ -1,4 +1,4 @@
-.PageNotFound {
+.page-not-found {
   margin: auto;
   text-align: center;
   padding: 10vmax;
@@ -8,14 +8,14 @@
   justify-content: center;
   align-items: center;
 }
-.PageNotFound > svg {
+.page-not-found > svg {
   font-size: 7vmax;
   color: tomato;
 }
-.PageNotFound > p {
+.page-not-found > p {
   font-size: 2vmax;
 }
-.PageNotFound > a {
+.page-not-found > a {
   background-color: rgb(51, 51, 51);
   color: white;
   border: none;
@@ -27,16 +27,16 @@
 }
 
 @media screen and (max-width: 600px) {
-  .PageNotFound > a {
+  .page-not-found > a {
     padding: 3vw 6vw;
     font: 400 4vw "Roboto";
     margin: 2vmax;
   }
 
-  .PageNotFound > svg {
+  .page-not-found > svg {
     font-size: 20vw;
   }
-  .PageNotFound > p {
+  .page-not-found > p {
     margin: 2vmax;
     font-size: 5vw;
   }

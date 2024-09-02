@@ -74,16 +74,16 @@ const UpdateProfile = () => {
       ) : (
         <Fragment>
           <MetaData title="Update Profile" />
-          <div className="updateProfileContainer">
-            <div className="updateProfileBox">
-              <h2 className="updateProfileHeading">Update Profile</h2>
+          <div className="update-profile-container">
+            <div className="update-profile-box">
+              <h2 className="update-profile-heading">Update Profile</h2>
 
               <form
-                className="updateProfileForm"
+                className="update-profile-form"
                 encType="multipart/form-data"
                 onSubmit={updateProfileSubmit}
               >
-                <div className="updateProfileName">
+                <div className="update-profile-name">
                   <label htmlFor="name"><FaceIcon /></label>
                   <input
                     type="text"
@@ -95,7 +95,7 @@ const UpdateProfile = () => {
                     onChange={(e) => setName(e.target.value)}
                   />
                 </div>
-                <div className="updateProfileEmail">
+                <div className="update-profile-Email">
                   <label htmlFor="email"><MailOutlineIcon /></label>
                   <input
                     type="email"
@@ -108,7 +108,7 @@ const UpdateProfile = () => {
                   />
                 </div>
 
-                <div id="updateProfileImage">
+                <div id="update-profile-image">
                   <img src={avatarPreview} alt="Avatar Preview" />
                   <input
                     type="file"
@@ -120,7 +120,7 @@ const UpdateProfile = () => {
                 <input
                   type="submit"
                   value="Update"
-                  className="updateProfileBtn"
+                  className="update-profile-btn"
                 />
               </form>
             </div>

@@ -58,15 +58,15 @@ const UpdatePassword = () => {
       ) : (
         <Fragment>
           <MetaData title="Change Password" />
-          <div className="updatePasswordContainer">
-            <div className="updatePasswordBox">
-              <h2 className="updatePasswordHeading">Update Profile</h2>
+          <div className="update-password-container">
+            <div className="update-password-box">
+              <h2 className="update-password-heading">Update Profile</h2>
 
               <form
-                className="updatePasswordForm"
+                className="update-password-form"
                 onSubmit={updatePasswordSubmit}
               >
-                <div className="loginPassword">
+                <div className="login-password">
                   <VpnKeyIcon />
                   <input
                     type="password"
@@ -77,7 +77,7 @@ const UpdatePassword = () => {
                   />
                 </div>
 
-                <div className="loginPassword">
+                <div className="login-lassword">
                   <LockOpenIcon />
                   <input
                     type="password"
@@ -87,7 +87,7 @@ const UpdatePassword = () => {
                     onChange={(e) => setNewPassword(e.target.value)}
                   />
                 </div>
-                <div className="loginPassword">
+                <div className="login-password">
                   <LockIcon />
                   <input
                     type="password"
@@ -100,7 +100,7 @@ const UpdatePassword = () => {
                 <input
                   type="submit"
                   value="Change"
-                  className="updatePasswordBtn"
+                  className="update-password-btn"
                 />
               </form>
             </div>

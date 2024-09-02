@@ -100,18 +100,18 @@ const LoginSignUp = () => {
 
     const switchTabs = (e, tab) => {
         if (tab === "login") {
-            switcherTab.current.classList.add("shiftToNeutral");
-            switcherTab.current.classList.remove("shiftToRight");
-            registerTab.current.classList.remove("shiftToNeutralForm");
-            loginTab.current.classList.remove("shiftToLeft");
-            registerTab.current.classList.remove("shiftToLeft");
+            switcherTab.current.classList.add("shift-to-neutral");
+            switcherTab.current.classList.remove("shift-to-right");
+            registerTab.current.classList.remove("shift-to-neutral-form");
+            loginTab.current.classList.remove("shift-to-left");
+            registerTab.current.classList.remove("shift-to-left");
             resetLoginFields();
         }
         if (tab === "register") {
-            switcherTab.current.classList.add("shiftToRight");
-            switcherTab.current.classList.remove("shiftToNeutral");
-            registerTab.current.classList.add("shiftToNeutralForm");
-            loginTab.current.classList.add("shiftToLeft");
+            switcherTab.current.classList.add("shift-to-right");
+            switcherTab.current.classList.remove("shift-to-neutral");
+            registerTab.current.classList.add("shift-to-neutral-form");
+            loginTab.current.classList.add("shift-to-left");
             resetRegisterFields();
         }
     };
@@ -121,8 +121,8 @@ const LoginSignUp = () => {
             {loading ? (
                 <Loader />
             ) : (
-                <div className="LoginSignUpContainer">
-                    <div className="LoginSignUpBox">
+                <div className="login-sign-up-container">
+                    <div className="login-sign-up-box">
                         <div>
                             <div className="login-signup-toggle">
                                 <p onClick={(e) => switchTabs(e, "login")}>LOGIN</p>

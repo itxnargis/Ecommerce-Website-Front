@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div className="PageNotFound">
+    <div className="page-not-found">
       <ErrorIcon />
 
       <Typography>Page Not Found </Typography>

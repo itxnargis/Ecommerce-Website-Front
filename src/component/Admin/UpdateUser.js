@@ -77,12 +77,12 @@ const UpdateUser = () => {
       <MetaData title="Update User" />
       <div className="dashboard">
         <Sidebar />
-        <div className="newProductContainer">
+        <div className="new-product-container">
           {loading ? (
             <Loader />
           ) : (
             <form
-              className="createProductForm"
+              className="create-product-form"
               onSubmit={updateUserSubmitHandler}
             >
               <h1>Update User</h1>
@@ -118,7 +118,7 @@ const UpdateUser = () => {
               </div>
 
               <Button
-                id="createProductBtn"
+                id="create-product-btn"
                 type="submit"
                 disabled={
                   updateLoading ? true : false || role === "" ? true : false

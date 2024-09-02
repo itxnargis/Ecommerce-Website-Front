@@ -40,13 +40,14 @@ const ProductReviews = () => {
 
   const productReviewsSubmitHandler = (e) => {
     e.preventDefault();
-    dispatch(getAllReviews(productId));
+    if (productId.length === 24) {
+      dispatch(getAllReviews(productId));
+    } else {
+      alert.error("Invalid Product ID");
+    }
   };
 
   useEffect(() => {
-    if (productId.length === 24) {
-      dispatch(getAllReviews(productId));
-    }
     if (error) {
       alert.error(error);
       dispatch(clearErrors());
@@ -136,12 +137,12 @@ const ProductReviews = () => {
 
       <div className="dashboard">
         <Sidebar />
-        <div className="productReviewsContainer">
+        <div className="product-reviews-container">
           <form
-            className="productReviewsForm"
+            className="product-reviews-form"
             onSubmit={productReviewsSubmitHandler}
           >
-            <h1 className="productReviewsFormHeading">ALL REVIEWS</h1>
+            <h1 className="product-reviews-form-heading">ALL REVIEWS</h1>
 
             <div>
               <Star />
@@ -155,7 +156,7 @@ const ProductReviews = () => {
             </div>
 
             <Button
-              id="createProductBtn"
+              id="create-product-btn"
               type="submit"
               disabled={
                 loading ? true : false || productId === "" ? true : false
@@ -165,17 +166,20 @@ const ProductReviews = () => {
             </Button>
           </form>
 
-          {reviews && reviews.length > 0 ? (
+          {loading ? (
+            <p>Loading...</p>
+          ) :reviews && reviews.length > 0 ? (
+
             <DataGrid
               rows={rows}
               columns={columns}
               pageSize={10}
               disableSelectionOnClick
-              className="productListTable"
+              className="product-list-table"
               autoHeight
             />
           ) : (
-            <h1 className="productReviewsFormHeading">No Reviews Found</h1>
+            <h1 className="product-reviews-form-heading">No Reviews Found</h1>
           )}
         </div>
       </div>

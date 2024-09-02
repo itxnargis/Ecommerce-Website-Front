@@ -14,7 +14,6 @@ import { DELETE_PRODUCT_RESET } from "../../constants/productConstant";
 
 const ProductList = () => {
   const dispatch = useDispatch();
-
   const alert = useAlert();
   const navigate = useNavigate();
 
@@ -50,7 +49,12 @@ const ProductList = () => {
 
 
   const columns = [
-    { field: "id", headerName: "Product ID", minWidth: 200, flex: 0.5 },
+    {
+      field: "id",
+      headerName: "Product ID",
+      minWidth: 200,
+      flex: 0.5,
+    },
 
     {
       field: "name",
@@ -100,34 +104,27 @@ const ProductList = () => {
       },
     },
   ];
-
-  const rows = [];
-
-  products &&
-    products.forEach((item) => {
-      rows.push({
-        id: item._id,
-        stock: item.Stock,
-        price: item.price,
-        name: item.name,
-      });
-    });
+  const rows = products?.map((item) => ({
+    id: item._id,
+    stock: item.Stock,
+    price: item.price,
+    name: item.name,
+  })) || [];
 
   return (
     <Fragment>
-      <MetaData title={`ALL PRODUCTS - Admin`} />
-
       <div className="dashboard">
+        <MetaData title={`ALL PRODUCTS - Admin`} />
         <Sidebar />
-        <div className="productListContainer">
-          <h1 id="productListHeading">ALL PRODUCTS</h1>
+        <div className="product-list-container">
+          <h1 id="product-list-heading">ALL PRODUCTS</h1>
 
           <DataGrid
             rows={rows}
             columns={columns}
             pageSize={10}
             disableSelectionOnClick
-            className="productListTable"
+            className="product-list-table"
             autoHeight
           />
         </div>

@@ -1,4 +1,3 @@
-
 import React, { Fragment, useEffect } from "react";
 import { DataGrid } from "@material-ui/data-grid";
 import "./myOrders.css";
@@ -93,17 +92,17 @@ const MyOrders = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="myOrdersPage">
+        <div className="my-orders-page">
           <DataGrid
             rows={rows}
             columns={columns}
             pageSize={10}
             disableSelectionOnClick
-            className="myOrdersTable"
+            className="my-orders-table"
             autoHeight
           />
 
-          <Typography id="myOrdersHeading">{user.name}'s Orders</Typography>
+          <Typography id="m-orders-heading">{user.name}'s Orders</Typography>
         </div>
       )}
     </Fragment>

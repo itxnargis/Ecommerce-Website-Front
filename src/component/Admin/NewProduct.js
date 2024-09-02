@@ -5,11 +5,13 @@ import { clearErrors, createProduct } from "../../actions/productAction";
 import { useAlert } from "react-alert";
 import { Button } from "@material-ui/core";
 import MetaData from "../layout/metaData";
-import AccountTreeIcon from "@material-ui/icons/AccountTree";
-import DescriptionIcon from "@material-ui/icons/Description";
-import StorageIcon from "@material-ui/icons/Storage";
-import SpellcheckIcon from "@material-ui/icons/Spellcheck";
-import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import {
+  AccountTree as AccountTreeIcon,
+  Description as DescriptionIcon,
+  Storage as StorageIcon,
+  Spellcheck as SpellcheckIcon,
+  AttachMoney as AttachMoneyIcon,
+} from "@material-ui/icons";
 import Sidebar from "./Sidebar";
 import { useNavigate } from "react-router-dom";
 import { NEW_PRODUCT_RESET } from "../../constants/productConstant";
@@ -18,6 +20,7 @@ const NewProduct = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
   const navigate = useNavigate();
+
   const { loading, error, success } = useSelector((state) => state.newProduct);
   const [brand, setBrand] = useState("");
   const [name, setName] = useState("");
@@ -91,18 +94,19 @@ const NewProduct = () => {
 
   return (
     <Fragment>
-      <MetaData title="Create Product" />
       <div className="dashboard">
+        <MetaData title="Create Product" />
         <Sidebar />
-        <div className="newProductContainer">
+        <div className="new-product-container">
           <form
-            className="createProductForm"
+            className="create-product-form"
             encType="multipart/form-data"
             onSubmit={createProductSubmitHandler}
           >
             <h1>Create Product</h1>
             <div>
               <SpellcheckIcon />
+
               <input
                 type="text"
                 placeholder="Product's Brand"
@@ -120,6 +124,7 @@ const NewProduct = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
+
             </div>
             <div>
               <AttachMoneyIcon />
@@ -140,18 +145,22 @@ const NewProduct = () => {
                 onChange={(e) => setDescription(e.target.value)}
                 cols="30"
                 rows="1"
-              ></textarea>
+              >
+              </textarea>
             </div>
 
             <div>
               <AccountTreeIcon />
               <select onChange={(e) => setCategory(e.target.value)}>
+
                 <option value="">Choose Category</option>
                 {categories.map((cate) => (
                   <option key={cate} value={cate}>
                     {cate}
                   </option>
-                ))}
+                )
+                )
+                }
               </select>
             </div>
 
@@ -165,7 +174,7 @@ const NewProduct = () => {
               />
             </div>
 
-            <div id="createProductFormFile">
+            <div id="create-product-form-file">
               <input
                 type="file"
                 name="avatar"
@@ -175,14 +184,14 @@ const NewProduct = () => {
               />
             </div>
 
-            <div id="createProductFormImage">
+            <div id="create-product-form-image">
               {imagesPreview.map((image, index) => (
                 <img key={index} src={image} alt="Product Preview" />
               ))}
             </div>
 
             <Button
-              id="createProductBtn"
+              id="create-product-btn"
               type="submit"
               disabled={loading ? true : false}
             >

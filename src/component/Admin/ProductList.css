@@ -1,4 +1,4 @@
-.productListContainer {
+.product-list-container {
   width: 100%;
   box-sizing: border-box;
   background-color: rgb(255, 255, 255);
@@ -8,7 +8,7 @@
   height: 100vh;
 }
 
-#productListHeading {
+#product-list-heading {
   font: 400 2rem "Roboto";
   padding: 0.5vmax;
   box-sizing: border-box;
@@ -18,28 +18,28 @@
   text-align: center;
 }
 
-.productListTable {
+.product-list-table {
   background-color: white;
   border: none !important;
 }
 
-.productListTable div {
+.product-list-table div {
   font: 300 1vmax "Roboto";
   color: rgba(0, 0, 0, 0.678);
   border: none !important;
 }
 
-.productListTable a,
-.productListTable button {
+.product-list-container a,
+.product-list-container button {
   color: rgba(0, 0, 0, 0.527);
   transition: all 0.5s;
 }
 
-.productListTable a:hover {
+.product-list-container a:hover {
   color: tomato;
 }
 
-.productListTable button:hover {
+.product-list-container button:hover {
   color: rgb(236, 30, 30);
 }
 
@@ -48,7 +48,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .productListTable div {
+  .product-list-container div {
     font: 300 4vw "Roboto";
   }
 }

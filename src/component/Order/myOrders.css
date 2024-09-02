@@ -1,5 +1,4 @@
-
-.myOrdersPage {
+.my-orders-page {
     width: 100vw;
     max-width: 100%;
     padding: 0 7vmax;
@@ -13,7 +12,7 @@
     flex-direction: column;
   }
 
-  #myOrdersHeading {
+  #my-orders-heading {
     text-align: center;
     font: 400 1.2vmax "Roboto";
     padding: 0.5vmax;
@@ -23,22 +22,22 @@
     background-color: rgb(44, 44, 44);
   }
 
-  .myOrdersTable {
+  .my-orders-table {
     background-color: white;
   }
 
-  .myOrdersTable div {
+  .my-orders-table div {
     font: 300 1vmax "Roboto";
     color: rgba(0, 0, 0, 0.678);
     border: none;
   }
 
-  .myOrdersTable a {
+  .my-orders-table a {
     color: rgba(0, 0, 0, 0.527);
     transition: all 0.5s;
   }
 
-  .myOrdersTable a:hover {
+  .my-orders-table a:hover {
     color: tomato;
   }
 
@@ -57,17 +56,17 @@
   }
 
   @media screen and (max-width: 600px) {
-    .myOrdersPage {
+    .my-orders-page {
       padding: 0;
       height: 93vh;
     }
 
-    #myOrdersHeading {
+    #my-orders-heading {
       font: 400 2.2vmax "Roboto";
       padding: 4vw;
     }
 
-    .myOrdersTable div {
+    .my-orders-table div {
       font: 300 4vw "Roboto";
     }
 

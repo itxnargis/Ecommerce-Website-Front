@@ -94,13 +94,13 @@ const ProductDetails = () => {
             ) : (
                 <>
                     <MetaData title={`${product.name} --- ECOMMERCE`} />
-                    <div className="productDetails">
+                    <div className="product-details">
                         <div>
                             <Carousel>
                                 {product.images &&
                                     product.images.map((item, index) => (
                                         <img
-                                            className="carouselImage"
+                                            className="carousel-image"
                                             key={item.url}
                                             src={item.url}
                                             alt={`${index} Slide`}
@@ -110,22 +110,22 @@ const ProductDetails = () => {
                         </div>
 
                         <div>
-                            <div className="detailsBlock-1">
+                            <div className="details-block-1">
                                 <h2>{product.name}</h2>
                                 <p>Product # {product._id}</p>
                             </div>
 
-                            <div className="detailsBlock-2">
+                            <div className="details-block-2">
                                 <Rating {...options} />
-                                <span className="detailsBlock-2-span">
+                                <span className="details-block-2-span">
                                     ({product.numOfReviews} Reviews)
                                 </span>
                             </div>
 
-                            <div className="detailsBlock-3">
+                            <div className="details-block-3">
                                 <h1>{`Rs ${product.price}`}</h1>
-                                <div className="detailsBlock-3-1">
-                                    <div className="detailsBlock-3-1-1">
+                                <div className="details-block-3-1">
+                                    <div className="details-block-3-1-1">
                                         <button onClick={decreaseQuantity}>-</button>
                                         <input readOnly type="number" value={quantity} />
                                         <button onClick={increaseQuantity}>+</button>
@@ -146,16 +146,16 @@ const ProductDetails = () => {
                                 </p>
                             </div>
 
-                            <div className="detailsBlock-4">
+                            <div className="details-block-4">
                                 Description: <p>{product.description}</p>
                             </div>
-                            <button onClick={submitReviewToggle} className="submitReview">
+                            <button onClick={submitReviewToggle} className="submit-review">
                                 Submit Review
                             </button>
                         </div>
                     </div>
 
-                    <h3 className="reviewHeading">REVIEWS</h3>
+                    <h3 className="review-heading">REVIEWS</h3>
 
                     <Dialog
                         aria-labelledby="simple-dialog-title"
@@ -163,14 +163,14 @@ const ProductDetails = () => {
                         onClose={submitReviewToggle}
                     >
                         <DialogTitle>Submit Review</DialogTitle>
-                        <DialogContent className="submitDialog">
+                        <DialogContent className="submit-dialog">
                             <Rating
                                 onChange={(e) => setRating(e.target.value)}
                                 value={rating}
                                 size="large"
                             />
                             <textarea
-                                className="submitDialogTextArea"
+                                className="submit-dialog-text-area"
                                 cols="30"
                                 rows="5"
                                 value={comment}
@@ -194,7 +194,7 @@ const ProductDetails = () => {
                             ))}
                         </div>
                     ) : (
-                        <p className="noReviews">No Reviews Yet</p>
+                        <p className="no-reviews">No Reviews Yet</p>
                     )}
                 </>
             )}

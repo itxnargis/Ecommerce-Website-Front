@@ -22,7 +22,7 @@ const Profile = () => {
       ) : (
         <Fragment>
           <MetaData title={`${user.name}'s Profile`} />
-          <div className="profileContainer">
+          <div className="profile-container">
             <div>
               <h1>My Profile</h1>
               <img src={user.avatar.url} alt={user.name} />

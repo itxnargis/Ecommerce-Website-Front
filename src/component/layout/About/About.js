@@ -1,5 +1,5 @@
 import React from "react";
-import "./aboutSection.css";
+import "./about.css";
 import { Typography, Avatar } from "@material-ui/core";
 import { FaGithub, FaEnvelope, FaTwitter, FaLinkedin } from "react-icons/fa";
 
@@ -9,9 +9,9 @@ const About = () => {
   };
 
   return (
-    <div className="aboutSection">
-      <div className="aboutSectionGradient"></div>
-      <div className="aboutSectionContainer">
+    <div className="about-section">
+      <div className="about-section-gradient"></div>
+      <div className="about-section-container">
         <Typography component="h1">About Me</Typography>
         <div className="about-info">
           <div>

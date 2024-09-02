@@ -125,15 +125,15 @@ const UsersList = () => {
 
       <div className="dashboard">
         <Sidebar />
-        <div className="productListContainer">
-          <h1 id="productListHeading">ALL USERS</h1>
+        <div className="product-list-container">
+          <h1 id="product-list-heading">ALL USERS</h1>
 
           <DataGrid
             rows={rows}
             columns={columns}
             pageSize={10}
             disableSelectionOnClick
-            className="productListTable"
+            className="product-list-table"
             autoHeight
           />
         </div>

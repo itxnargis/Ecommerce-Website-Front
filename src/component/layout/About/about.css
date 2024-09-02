@@ -1,4 +1,4 @@
-.aboutSection {
+.about-section {
   height: 100vh;
   width: 100vw;
   max-width: 100%;
@@ -7,14 +7,16 @@
   grid-template-columns: 4fr 4fr;
   position: sticky;
 }
-.aboutSectionGradient {
+
+.about-section-gradient {
   background-image: linear-gradient(
     to bottom right,
     rgb(78, 81, 255),
     rgb(74, 137, 189)
   );
 }
-.aboutSectionContainer {
+
+.about-section-container {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -29,39 +31,48 @@
   flex-direction: column;
   align-items: center;
 }
-.aboutSectionContainer > h1 {
+
+.about-section-container > h1 {
   font: 400 3vmax "Roboto";
   color: #e0590b;
   margin: 1vmax;
 }
+
 .name {
   font: 600 2.5vmax "Roboto";
   color: #e0590b;
   margin: 1vmax;
 }
+
 .about-content {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
 .follow-me {
   font: 600 2vmax "Roboto";
   color: rgb(19, 18, 18);
   padding-top: 1rem;
 }
-.aboutSectionContainer > div {
+
+.about-section-container > div {
   display: flex;
   width: 100%;
 }
+
 .about-info {
   display: flex;
   flex-direction: column;
 }
+
 #iconLink {
   color: #000;
 }
+
 .btn-container {
   display: flex;
   justify-content: center;
 }
+
 .button {
   margin-top: 1rem;
   border-radius: 5rem;
@@ -74,7 +85,8 @@
   cursor: pointer;
   text-decoration: none;
 }
-.aboutSectionContainer > div > div {
+
+.about-section-container > div > div {
   width: 100%;
   display: flex;
   align-items: center;
@@ -82,69 +94,83 @@
   gap: 1.5vmax;
   box-sizing: border-box;
 }
-.aboutSectionContainer > div > div > p {
+
+.about-section-container > div > div > p {
   color: rgba(0, 0, 0, 0.623);
   font: 100 1vmax "Roboto";
 }
-.aboutSectionContainer > div > div > button {
+
+.about-section-container > div > div > button {
   margin: 1vmax 0;
 }
-.aboutSectionContainer > div > div > span {
+
+.about-section-container > div > div > span {
   font: 100 1vmax "Roboto";
   color: rgba(0, 0, 0, 0.616);
   text-align: center;
   width: 80%;
 }
-.aboutSectionContainer2 {
+
+.about-section-container2 {
   border-left: 1px solid rgba(0, 0, 0, 0.116);
 }
-.aboutSectionContainer2 > h2 {
+
+.about-section-container2 > h2 {
   color: rgba(0, 0, 0, 0.623);
   font: 100 2vmax "Roboto";
   margin: 2vmax;
 }
-.aboutSectionContainer2 > a > svg {
+
+.about-section-container2 > a > svg {
   font-size: 4vmax;
 }
+
 .youtubeSvgIcon {
   color: tomato;
 }
+
 .instagramSvgIcon {
   color: rgb(144, 81, 202);
 }
-.aboutSectionContainer > div > div > p {
+
+.about-section-container > div > div > p {
   font: 100 1vmax "Roboto";
   margin: 1vmax;
 }
+
 @media screen and (max-width: 600px) {
-  .aboutSectionContainer > div > div > p {
+  .about-section-container > div > div > p {
     font: 100 2vmax "Roboto";
   }
-  /* .follow-me {
-    padding-top: .3rem;
-  } */
-  .aboutSectionContainer > div {
+
+  .about-section-container > div {
     display: block;
   }
-  .aboutSectionContainer > h1 {
+
+  .about-section-container > h1 {
     font: 400 5vmax "Roboto";
   }
-  .aboutSectionContainer > div > div > p {
+
+  .about-section-container > div > div > p {
     font: 100 2vmax "Roboto";
   }
-  .aboutSectionContainer > div > div > span {
+
+  .about-section-container > div > div > span {
     font: 100 1.4vmax "Roboto";
     width: 70%;
   }
-  .aboutSectionContainer2 {
+
+  .about-section-container2 {
     border-left: none;
   }
-  .aboutSectionContainer2 > h2 {
+
+  .about-section-container2 > h2 {
     font: 100 3vmax "Roboto";
     margin: 2vmax;
     color: #e0590b;
   }
-  .aboutSectionContainer2 > a > svg {
+  
+  .about-section-container2 > a > svg {
     font-size: 6vmax;
     margin: 1vmax;
   }

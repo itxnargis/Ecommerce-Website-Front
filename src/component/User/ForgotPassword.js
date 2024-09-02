@@ -44,15 +44,15 @@ const ForgotPassword = () => {
       ) : (
         <Fragment>
           <MetaData title="Forgot Password" />
-          <div className="forgotPasswordContainer">
-            <div className="forgotPasswordBox">
-              <h2 className="forgotPasswordHeading">Forgot Password</h2>
+          <div className="forgot-password-container">
+            <div className="forgot-password-box">
+              <h2 className="forgot-password-heading">Forgot Password</h2>
 
               <form
-                className="forgotPasswordForm"
+                className="forgot-password-form"
                 onSubmit={forgotPasswordSubmit}
               >
-                <div className="forgotPasswordEmail">
+                <div className="forgot-password-email">
                   <MailOutlineIcon />
                   <input
                     type="email"
@@ -67,7 +67,7 @@ const ForgotPassword = () => {
                 <input
                   type="submit"
                   value="Send"
-                  className="forgotPasswordBtn"
+                  className="forgot-password-btn"
                 />
               </form>
             </div>

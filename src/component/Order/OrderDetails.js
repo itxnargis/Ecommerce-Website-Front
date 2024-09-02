@@ -29,13 +29,13 @@ const OrderDetails = ({ match }) => {
       ) : (
         <Fragment>
           <MetaData title="Order Details" />
-          <div className="orderDetailsPage">
-            <div className="orderDetailsContainer">
+          <div className="order-details-page">
+            <div className="order-details-container">
               <Typography component="h1">
                 Order #{order && order._id}
               </Typography>
               <Typography>Shipping Info</Typography>
-              <div className="orderDetailsContainerBox">
+              <div className="order-details-container-box">
                 <div>
                   <p>Name:</p>
                   <span>{order.user && order.user.name}</span>
@@ -55,7 +55,7 @@ const OrderDetails = ({ match }) => {
                 </div>
               </div>
               <Typography>Payment</Typography>
-              <div className="orderDetailsContainerBox">
+              <div className="order-details-container-box">
                 <div>
                   <p
                     className={
@@ -79,7 +79,7 @@ const OrderDetails = ({ match }) => {
               </div>
 
               <Typography>Order Status</Typography>
-              <div className="orderDetailsContainerBox">
+              <div className="order-details-container-box">
                 <div>
                   <p
                     className={
@@ -94,9 +94,9 @@ const OrderDetails = ({ match }) => {
               </div>
             </div>
 
-            <div className="orderDetailsCartItems">
+            <div className="order-details-cart-items">
               <Typography>Order Items:</Typography>
-              <div className="orderDetailsCartItemsContainer">
+              <div className="order-details-cart-items-container">
                 {order.orderItems &&
                   order.orderItems.map((item) => (
                     <div key={item.product}>

@@ -46,7 +46,7 @@ const FilterModal = ({ open, handleClose }) => {
       aria-labelledby="simple-modal-title"
       aria-describedby="simple-modal-description"
     >
-      <div className="filterContent">
+      <div className="filter-content">
         <Typography>Price</Typography>
         <Slider
           value={price}
@@ -57,7 +57,7 @@ const FilterModal = ({ open, handleClose }) => {
           max={25000}
         />
         <Typography>Categories</Typography>
-        <ul className="categoryBox">
+        <ul className="category-box">
           {categories.map((category) => (
             <li
               className="category-link"
@@ -79,9 +79,9 @@ const FilterModal = ({ open, handleClose }) => {
             valueLabelDisplay="auto"
           />
         </fieldset>
-        <div className="filterButtons">
-          <button onClick={handleClose} className="applyButton">Done</button>
-          <button onClick={clearFilters} className="cancelButton">Clear Filters</button>
+        <div className="filter-buttons">
+          <button onClick={handleClose} className="apply-button">Done</button>
+          <button onClick={clearFilters} className="cancel-button">Clear Filters</button>
         </div>
       </div>
     </Modal>

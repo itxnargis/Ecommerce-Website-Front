@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import "./Sidebar.css";
-import logo from "../../images/logo.png";
+import logo from "../../images/Trendz-logo.png";
 import { Link } from "react-router-dom";
 import { TreeView, TreeItem } from "@material-ui/lab";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -17,7 +17,7 @@ const Sidebar = () => {
         <Fragment>
             <div className="sidebar">
                 <Link to="/">
-                    <img src={logo} alt="Ecommerce" />
+                    <img src={logo} alt="Ecommerce-logo" />
                 </Link>
 
                 <Link to="/admin/dashboard">

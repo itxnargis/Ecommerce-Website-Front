@@ -57,23 +57,24 @@ const ProcessOrder = () => {
 
   return (
     <Fragment>
-      <MetaData title="Process Order" />
       <div className="dashboard">
+      <MetaData title="Process Order" />
         <SideBar />
-        <div className="newProductContainer">
+
+        <div className="new-product-container">
           {loading ? (
             <Loader />
           ) : (
             <div
-              className="confirmOrderPage"
+              className="confirm-order-page"
               style={{
                 display: order.orderStatus === "Delivered" ? "block" : "grid",
               }}
             >
               <div>
-                <div className="confirmshippingArea">
+                <div className="confirm-shipping-area">
                   <Typography>Shipping Info</Typography>
-                  <div className="orderDetailsContainerBox">
+                  <div className="order-details-container-box">
                     <div>
                       <p>Name:</p>
                       <span>{order.user && order.user.name}</span>
@@ -94,7 +95,7 @@ const ProcessOrder = () => {
                   </div>
 
                   <Typography>Payment</Typography>
-                  <div className="orderDetailsContainerBox">
+                  <div className="order-details-container-box">
                     <div>
                       <p
                         className={
@@ -118,7 +119,7 @@ const ProcessOrder = () => {
                   </div>
 
                   <Typography>Order Status</Typography>
-                  <div className="orderDetailsContainerBox">
+                  <div className="order-details-container-box">
                     <div>
                       <p
                         className={
@@ -132,9 +133,9 @@ const ProcessOrder = () => {
                     </div>
                   </div>
                 </div>
-                <div className="confirmCartItems">
+                <div className="confirm-cart-items">
                   <Typography>Your Cart Items:</Typography>
-                  <div className="confirmCartItemsContainer">
+                  <div className="confirm-cart-items-container">
                     {order.orderItems &&
                       order.orderItems.map((item) => (
                         <div key={item.product}>
@@ -158,7 +159,7 @@ const ProcessOrder = () => {
                 }}
               >
                 <form
-                  className="updateOrderForm"
+                  className="update-order-form"
                   onSubmit={updateOrderSubmitHandler}
                 >
                   <h1>Process Order</h1>
@@ -178,7 +179,7 @@ const ProcessOrder = () => {
                   </div>
 
                   <Button
-                    id="createProductBtn"
+                    id="create-product-btn"
                     type="submit"
                     disabled={
                       loading ? true : false || status === "" ? true : false
