@@ -23,7 +23,7 @@ const Product = ({ product }) => {
 
     return (
         <div>
-            <Link className="productCard" to={`/product/${product._id}`}>
+            <Link className="product-card" to={`/product/${product._id}`}>
                 <div className="image-wrapper">
                     <img src={product.images[0].url} alt={product.name} />
                 </div>
