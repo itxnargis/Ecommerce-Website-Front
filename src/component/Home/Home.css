@@ -88,7 +88,7 @@
 }
 
 .banner-content {
-  background: hsl(0deg 19.2% 83.62% / 80%);
+  background: hsl(0deg 9.85% 83.57% / 80%);
   box-shadow: 4px 4px 4px #b3a6a6;
   position: absolute;
   top: 30%;
@@ -380,11 +380,5 @@
 
   .banner-btn {
     --fs-11: 0.875rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .banner-title {
-    color: var(--sonic-silver);
   }
 }
