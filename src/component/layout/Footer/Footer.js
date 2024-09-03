@@ -2,6 +2,7 @@ import React from "react";
 import { IoLocationOutline, IoMailOutline } from 'react-icons/io5';
 import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin } from 'react-icons/ai';
 import "./footer.css";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -13,16 +14,16 @@ const Footer = () => {
                             <h2 className="nav-title">Popular Categories</h2>
                         </li>
                         <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Fashion</a>
+                            <a href="#" className="footer-nav-link">Laptop</a>
                         </li>
                         <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Electronic</a>
+                            <a href="#" className="footer-nav-link">Tops</a>
                         </li>
                         <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Cosmetic</a>
+                            <a href="#" className="footer-nav-link">Bottom</a>
                         </li>
                         <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Health</a>
+                            <a href="#" className="footer-nav-link">Camera</a>
                         </li>
                         <li className="footer-nav-item">
                             <a href="#" className="footer-nav-link">Watches</a>
@@ -30,62 +31,19 @@ const Footer = () => {
                     </ul>
                     <ul className="footer-nav-list">
                         <li className="footer-nav-item">
-                            <h2 className="nav-title">Products</h2>
+                            <h2 className="nav-title">More Information</h2>
                         </li>
                         <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Prices drop</a>
+                        <Link to="/" className="footer-nav-link">Home</Link>
                         </li>
                         <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">New products</a>
+                        <Link to="/products" className="footer-nav-link">Products</Link>
                         </li>
                         <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Best sales</a>
+                        <Link to="/about" className="footer-nav-link">About</Link>
                         </li>
                         <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Contact us</a>
-                        </li>
-                        <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Sitemap</a>
-                        </li>
-                    </ul>
-                    <ul className="footer-nav-list">
-                        <li className="footer-nav-item">
-                            <h2 className="nav-title">Our Company</h2>
-                        </li>
-                        <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Delivery</a>
-                        </li>
-                        <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Legal Notice</a>
-                        </li>
-                        <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Terms and conditions</a>
-                        </li>
-                        <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">About us</a>
-                        </li>
-                        <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Secure payment</a>
-                        </li>
-                    </ul>
-                    <ul className="footer-nav-list">
-                        <li className="footer-nav-item">
-                            <h2 className="nav-title">Services</h2>
-                        </li>
-                        <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Prices drop</a>
-                        </li>
-                        <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">New products</a>
-                        </li>
-                        <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Best sales</a>
-                        </li>
-                        <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Contact us</a>
-                        </li>
-                        <li className="footer-nav-item">
-                            <a href="#" className="footer-nav-link">Sitemap</a>
+                        <Link to="/contact" className="footer-nav-link">Contact</Link>
                         </li>
                     </ul>
                     <ul className="footer-nav-list">

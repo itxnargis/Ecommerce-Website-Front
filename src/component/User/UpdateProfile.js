@@ -21,7 +21,7 @@ const UpdateProfile = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [avatar, setAvatar] = useState("");
-  const [avatarPreview, setAvatarPreview] = useState("/Profile.png");
+  const [avatarPreview, setAvatarPreview] = useState("/Trendz-logo.png");
 
   const updateProfileSubmit = (e) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ const UpdateProfile = () => {
       const reader = new FileReader();
       reader.onloadend = () => {
         setAvatarPreview(reader.result);
-        setAvatar(file);
+        setAvatar(reader.result);
       };
       reader.readAsDataURL(file);
     }
@@ -64,6 +64,7 @@ const UpdateProfile = () => {
       dispatch(loadUser());
       navigate("/account");
       dispatch({ type: UPDATE_PROFILE_RESET });
+      window.location.reload(); 
     }
   }, [dispatch, error, alert, navigate, user, isUpdated]);
 
